@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    font-family: Roboto;
+}
+
 body {
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 23vh 77vh;
 }
 
+/* SIDEBAR */
 .sidebar {
-    width: 250px;
+    grid-row: 1 / 3;
     height: 100vh;
     background-color: rgb(42, 159, 255);
 }
@@ -45,4 +53,123 @@ body {
 .main-nav-items svg,
 .extra-nav-items svg {
     padding-right: 16px;
+}
+
+/* ----------------- TOP UI -------------------*/
+.top-bar-container,
+.top-bar-container > div,
+.top-bar-container > :first-child,
+.top-bar-container > :nth-child(2),
+.notifications-small-profile,
+.main-profile,
+.searchbar {
+    display: flex;
+    font-weight: bold;
+}
+
+.top-bar-container > :first-child,
+.top-bar-container > :nth-child(2) {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications-small-profile,
+.main-profile {
+     align-items: center;
+}
+
+.top-bar-container img:hover,
+.top-bar-container button:hover,
+.main-profile-text > :nth-child(2):hover,
+.notifications-small-profile span:hover,
+.notifications-small-profile svg:hover {
+    cursor: pointer;
+}
+
+/* ------------------------------------------ */
+
+.top-bar-container {
+    padding: 20px 30px 10px 30px;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.164);
+    z-index: 1;
+}
+
+.top-bar-container > :nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.main-profile-text {
+    flex-direction: column;
+}
+
+.notifications-small-profile {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+}
+
+.notifications-small-profile > svg {
+    margin-right: 30px
+
+    
+}
+
+.top-bar-container img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.top-bar-container .main-profile-photo {
+    width: 70px;
+    height: 70px;
+}
+
+.searchbar > input{
+    margin-left: 10px;
+    padding-left: 10px;
+    border: none;
+    width: 40vw;
+    border-radius: 30px;
+    background-color: rgb(219, 219, 219);
+}
+
+.main-profile-text {
+    margin-left: 15px;
+    gap: 5px;
+    display: grid;
+}
+
+.main-profile-text > :nth-child(1) {
+    font-size: 14px;
+}
+
+.main-profile-text > :nth-child(2) {
+    font-size: 24px;
+}
+
+.ui-buttons {
+    margin-top: 20px;
+    display: grid;
+    grid-auto-flow: column ;
+    gap: 20px;
+}
+
+.ui-buttons button {
+    width: 90px;
+    height: 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15;
+    color: white;
+    border: none;
+    background-color: rgb(42, 159, 255);
+}
+
+
+/* ---------------- MAIN DASHBOARD ---------------*/
+.main-dashboard {
+    background-color: rgb(235, 235, 235);
 }
