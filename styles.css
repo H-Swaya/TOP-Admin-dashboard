@@ -222,3 +222,43 @@ body {
     padding-right: 20px;
 }
 
+.your-projects-element p {
+    color: rgb(77, 77, 77);
+}
+
+/* anouncement section */
+.announcement-container h3,
+.announcement-container p {
+    margin: 0px;
+}
+
+.announcement-container h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.announcement-container p {
+    color: rgb(77, 77, 77);
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.announcements-element {
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.announcements-element:last-child {
+    border-bottom: none
+}
+
+.announcement-container {
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.announcement-container {
+    padding: 10px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: white;
+}
